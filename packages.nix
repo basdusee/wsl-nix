@@ -4,9 +4,15 @@
 
   home.packages = with pkgs; [
 
+    # Programming languages
+    clojure         # Clojure
+    leiningen       # Clojure management tool
+    python3         # well, the snakelang
+    xonsh           # advanced python shell
+
     # new age Rust tools
     bat             # better cat 
-    exa             # better ls
+    eza             # better ls
     fd              # better find
     ripgrep         # better grep
     tldr            # shorter man
@@ -29,6 +35,7 @@
     # file (system) tools
     binwalk         # 
     dos2unix        # strip cr\lf to only cr
+    file            # plain old file identifier
     hexedit         # hex (and ascii) editor 
     jq              # json query, parse json files
     mc              # midnight commander, nc clone
@@ -45,7 +52,9 @@
     mdp             # command line markdown presentation tool
 
     # tools
+    bottom          # top version in Rust
     btop            # better htop
+    cpufetch        # neofetch but cpu specific
     et              # "egg-timer", uses libnotify
     fzf             # fuzzy finder
     git             # well, git
@@ -57,6 +66,7 @@
     magic-wormhole  # transfer files and text safely
     meld            # gui differ
     neofetch        # distro displayer
+    openssl         # All the certs stuff
     zbar            # command line qr and barcode reader
 
     # shenanigans
@@ -64,6 +74,8 @@
     cmatrix         # the matrix on the console
     hollywood       # fill your screen with busy nonsense
     sl              # ls mistyping punisher
+    xorg.xeyes      # Actually useful for stopping certain bugs in WSL?
+    oneko           # cute cat chasing your mouse
 
     # language servers for neovim
     rnix-lsp        # nix files lsp
