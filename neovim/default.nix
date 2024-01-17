@@ -83,10 +83,6 @@
     extraPackages = with pkgs; [
       rnix-lsp                     # .nix file lsp
       sumneko-lua-language-server  # lua lsp
-      (python3.withPackages (ps: with ps; [
-        black
-        flake8
-      ]))
     ];
 
   };

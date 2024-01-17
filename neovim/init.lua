@@ -29,6 +29,7 @@ opt.ruler = true             -- show the line and pos in statusbar down right
 opt.signcolumn = "number"    -- extra column for error signs and stuff
 -- opt.cursorline = true     -- highlight the line the cursor is on
 opt.wrap = false             -- disable line wrap, it's annoying and looks messy
+opt.foldenable = false       -- folds are _annoying_, especially in markdown documents
 opt.updatetime = 300         -- faster response times, for like autocomplete
 opt.lazyredraw = true        -- performance improvement when for example macro's run
 opt.relativenumber = true    -- numbers relative to current line, not absolute numbers

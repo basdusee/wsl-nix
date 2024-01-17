@@ -1,3 +1,5 @@
 node_modules/
 .direnv/
 .luarc.json
+.ipynb_checkpoints/
+*.ipynb

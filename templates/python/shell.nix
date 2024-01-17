@@ -3,6 +3,9 @@
 let
   # Python libraries installed in the environment
   pythonEnv = pkgs.python3Full.withPackages (ps: with ps; [
+    flake8
+    ipython
+    polars
     requests
   ]);
 

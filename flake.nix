@@ -50,7 +50,10 @@
                   username = uservars.username;
                   homeDirectory = uservars.homeDirectory;
                   stateVersion = uservars.nixVersion; # Please read some comment about something. 
-                  sessionVariables = { EDITOR = "nvim";};
+                  sessionVariables = { 
+		      EDITOR = "nvim";
+                      RUST_SRC_PATH = "${pkgs.rust.packages.stable.rustPlatform.rustLibSrc}";
+		  };
                 };
 
                 # plz use nvim as default editor
@@ -63,7 +66,6 @@
                   # Enable some tools with extra settings
                   bat.enable = true;
                   jq.enable = true;
-                  direnv.enable = true;
 
                   # shell config goes here, I have a very plain vanilla zsh, but with starship for bling.
                   zsh = {

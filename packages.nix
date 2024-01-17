@@ -1,17 +1,40 @@
 { pkgs, ... }:
 
 {
-
   home.packages = with pkgs; [
 
-    # Programming languages
+    # Clojure stuff
     clojure         # Clojure
     leiningen       # Clojure management tool
-    python3         # well, the snakelang
+
+    # Python3 stuff
+    # Python libraries installed in the environment
+    (python3.withPackages (ps: with ps; [
+      flake8
+      ipython
+      notebook
+      polars
+      requests
+      python-pkcs11   # for EJBCA REST api test
+      pyopenssl       # for EJBCA REST api test
+      yubico          # for EJBCA REST api test
+    ]))
+    black
+    #jupyter        # no worky with custom python3.withPackages
+    poetry
+    mypy
     xonsh           # advanced python shell
 
+    # Rust stable stuff
+    cargo
+    clippy
+    gcc
+    rust-analyzer   # rustlang lsp
+    rustc
+    rustfmt
+
     # new age Rust tools
-    bat             # better cat 
+    #bat            # better cat, via programs.bat.enable = true;
     eza             # better ls
     fd              # better find
     ripgrep         # better grep
@@ -37,7 +60,7 @@
     dos2unix        # strip cr\lf to only cr
     file            # plain old file identifier
     hexedit         # hex (and ascii) editor 
-    jq              # json query, parse json files
+    #jq             # json query, via home-manager programs.jq.enable
     mc              # midnight commander, nc clone
     nnn             # extremely minimal file manager
     unzip           # extract zip files
@@ -51,22 +74,31 @@
     inkscape        # vector drawing
     mdp             # command line markdown presentation tool
 
-    # tools
+    # devops tools
+    curl            # well, curl is the definition of devops
+    git             # well, git
+    git-crypt       # encrypt stuff like credentials
+    insomnia        # postman api thingy
+    k9s             # mega ultra kubernetes ding
+    podman          # like docker, but better
+
+    # local tools
     bottom          # top version in Rust
     btop            # better htop
     cpufetch        # neofetch but cpu specific
     et              # "egg-timer", uses libnotify
     fzf             # fuzzy finder
-    git             # well, git
-    git-crypt       # encrypt stuff like credentials
     glow            # markdown reader
     gnupg           # gnu privacy guard
     htop            # system performance
-    insomnia        # postman api thingy
     magic-wormhole  # transfer files and text safely
     meld            # gui differ
     neofetch        # distro displayer
+    opensc          # smart card libraries and tools
     openssl         # All the certs stuff
+    speedtest-cli   # test network speed
+    yubikey-manager # for using/accessing yubikey from WSL
+    yubico-piv-tool # Yubikey tool en PIV lib for pkcs11
     zbar            # command line qr and barcode reader
 
     # shenanigans
@@ -79,10 +111,6 @@
 
     # language servers for neovim
     rnix-lsp        # nix files lsp
-    rust-analyzer   # rustlang lsp
-
-    # more elaborate tools
-    podman          # like docker, but better
 
   ];
 }
