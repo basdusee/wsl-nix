@@ -25,6 +25,9 @@
     mypy
     xonsh           # advanced python shell
 
+    # (All the) Julia stuff
+    julia           # jep, that's it.
+
     # Rust stable stuff
     cargo
     clippy
@@ -44,16 +47,17 @@
     dnstracer       # follow dns servers to root
     ipcalc          # simple subnet calculator
     minicom         # serial console
+    mosh            # stateless ssh, easy reconnect
+    mtr             # tui traceroute
     nmap            # portscanner. THE portscanner.
     ngrep           # network packet analyzer
     openssh         # ssh, but it's very open (the OpenBSD ssh).
+    rsync           # sync dirs, local or over the network
     socat           # network plumbing
+    stunnel         # TLS "stuff"
     tcpreplay       # replay a captured tcp stream, on the network
     tcptraceroute   # traceroute, but with tcp packets
-    rsync           # sync dirs, local or over the network
     wget            # get thigs from the web
-    mosh            # stateless ssh, easy reconnect
-    mtr             # tui traceroute
 
     # file (system) tools
     binwalk         # 
@@ -73,6 +77,7 @@
     gnumeric        # spreadsheet
     inkscape        # vector drawing
     mdp             # command line markdown presentation tool
+    nyxt            # hackable browser
 
     # devops tools
     curl            # well, curl is the definition of devops
@@ -83,6 +88,7 @@
     podman          # like docker, but better
 
     # local tools
+    apg             # password generator
     bottom          # top version in Rust
     btop            # better htop
     cpufetch        # neofetch but cpu specific
@@ -90,14 +96,18 @@
     fzf             # fuzzy finder
     glow            # markdown reader
     gnupg           # gnu privacy guard
+    gnutls          # p11tool, psktool, certtool, gnutls-cli
     htop            # system performance
     magic-wormhole  # transfer files and text safely
     meld            # gui differ
     neofetch        # distro displayer
     opensc          # smart card libraries and tools
     openssl         # All the certs stuff
+    p11-kit         # library for loading and sharing pkcs11 modules
+    p7zip           # 7z compressor
+    pcsctools       # Some tools to check pcsc stuff
+    pkcs11helper    # helper library for pkcs11 integration from OpenSC
     speedtest-cli   # test network speed
-    yubikey-manager # for using/accessing yubikey from WSL
     yubico-piv-tool # Yubikey tool en PIV lib for pkcs11
     zbar            # command line qr and barcode reader
 
