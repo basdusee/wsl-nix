@@ -118,9 +118,6 @@
     sl              # ls mistyping punisher
     xorg.xeyes      # Actually useful for stopping certain bugs in WSL?
     oneko           # cute cat chasing your mouse
-
-    # language servers for neovim
-    rnix-lsp        # nix files lsp
-
   ];
+
 }

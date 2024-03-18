@@ -10,6 +10,10 @@
 local opt = vim.opt
 local g = vim.g
 
+-- mapleader definition, needs to go first
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true })
+g.mapleader = ' '
+
 -- to be considered, don't know this options
 -- opt.ttimeoutlen = 5   -- type timeout??? dont know
 
@@ -30,6 +34,7 @@ opt.signcolumn = "number"    -- extra column for error signs and stuff
 -- opt.cursorline = true     -- highlight the line the cursor is on
 opt.wrap = false             -- disable line wrap, it's annoying and looks messy
 opt.foldenable = false       -- folds are _annoying_, especially in markdown documents
+opt.foldmethod = 'manual'    -- set folds explitly to manual
 opt.updatetime = 300         -- faster response times, for like autocomplete
 opt.lazyredraw = true        -- performance improvement when for example macro's run
 opt.relativenumber = true    -- numbers relative to current line, not absolute numbers
@@ -109,8 +114,6 @@ map('n', '<C-u>', '<C-u>zz')
 map('n', 'n', 'nzzzv')
 map('n', 'N', 'Nzzzv')
 
--- mapleader definition, we use space
-g.mapleader = ' '
 
 -- random leader bindings
 map('n', '<leader>u', ':set list!<CR>')  -- toggle listchars

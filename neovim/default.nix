@@ -81,7 +81,7 @@
         ];
 
     extraPackages = with pkgs; [
-      rnix-lsp                     # .nix file lsp
+      # rnix-lsp                     # .nix file lsp
       sumneko-lua-language-server  # lua lsp
     ];
 
