@@ -6,7 +6,7 @@
 
     enable = true;
 
-    enableBashIntegration = false;
+    enableBashIntegration = true;
     enableZshIntegration = true;
     enableFishIntegration = false;
     enableIonIntegration = false;

@@ -81,6 +81,7 @@
 
     # devops tools
     curl            # well, curl is the definition of devops
+    dive            # for reading/examining docker images
     git             # well, git
     git-crypt       # encrypt stuff like credentials
     insomnia        # postman api thingy
